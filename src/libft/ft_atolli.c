@@ -40,8 +40,8 @@ long long int	ft_atolli(const char *str)
 	return (result * sign);
 }
 
-int	main(void)
-{
-	char *str = NULL;
-	ft_printf("%d\n", ft_atolli(str));
-}
+// int	main(void)
+// {
+// 	char *str = NULL;
+// 	ft_printf("%d\n", ft_atolli(str));
+// }
