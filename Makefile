@@ -6,7 +6,7 @@
 #    By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 18:19:52 by lgalloux          #+#    #+#              #
-#    Updated: 2024/05/29 23:42:29 by lgalloux         ###   ########.fr        #
+#    Updated: 2024/05/30 00:40:49 by lgalloux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,6 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR) $(OBJ_DIR)/libft $(OBJ_DIR)/printf $(OBJ_DIR)/gnl
 	$(CC) $(HEADER) $(CFLAGS) -o $@ -c $<
 
-test: $(TNAME)
-
 clean:
 	$(RM) $(OBJ_DIR)
 
@@ -59,4 +57,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
