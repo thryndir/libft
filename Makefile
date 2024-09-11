@@ -6,7 +6,7 @@
 #    By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 18:19:52 by lgalloux          #+#    #+#              #
-#    Updated: 2024/05/30 00:40:49 by lgalloux         ###   ########.fr        #
+#    Updated: 2024/09/11 12:13:20 by lgalloux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ $(TNAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@mkdir -p $(OBJ_DIR) $(OBJ_DIR)/libft $(OBJ_DIR)/printf $(OBJ_DIR)/gnl
+	@mkdir -p $(@D)
 	$(CC) $(HEADER) $(CFLAGS) -o $@ -c $<
 
 clean:

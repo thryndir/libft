@@ -6,7 +6,7 @@
 /*   By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 15:33:42 by lgalloux          #+#    #+#             */
-/*   Updated: 2024/05/12 01:54:25 by lgalloux         ###   ########.fr       */
+/*   Updated: 2024/09/11 17:31:34 by lgalloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	ft_printf(const char *format, ...)
 
 // int	main(void)
 // {
-// 	printf(" -> %d\n",ft_printf(" NULL %s NULL ", NULL));
+// 	printf(" -> %d\n",ft_printf(" NULL %s NULL ", "test"));
 // 	printf("-----------------\n");
-// 	printf(" -> %d\n", printf("NULL %s NULL ", NULL));
+// 	printf(" -> %d\n", printf("NULL %s NULL ", "test"));
 // }
