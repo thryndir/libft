@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 15:16:45 by lgalloux          #+#    #+#             */
-/*   Updated: 2023/10/31 13:02:21 by lgalloux         ###   ########.fr       */
+/*   Created: 2024/04/26 16:03:23 by lgalloux          #+#    #+#             */
+/*   Updated: 2024/09/14 14:59:19 by lgalloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "pipex.h"
 
-void	*ft_calloc(size_t elementCount, size_t elementSize)
-{
-	unsigned char	*memory;
-	size_t			i;
+// int	main(int argc, char **argv, char **env)
+// {
+// 	t_pipex		pipex;
 
-	memory = malloc(elementCount * elementSize);
-	if (memory == NULL)
-		return (NULL);
-	i = 0;
-	while (i < elementCount * elementSize)
-	{
-		memory[i] = '\0';
-		i++;
-	}
-	return ((void *)memory);
-}
-
-/*int	main(void)
-{
-	size_t elementCount = 8;
-	size_t elementSize = 3;
-	printf("%p\n", ft_calloc(elementCount, elementSize));
-}*/
+// 	if (argc < 5)
+// 		ft_error("wrong number of arguments\n", &pipex, -WRITE_MSG, 1);
+// 	pipex.here_doc = 0;
+// 	here_doc_verif(&pipex, argc, argv);
+// 	struct_init(&pipex, argv, argc, env);
+// 	init_pipe_fds(&pipex);
+// 	parent(argv, argc - 2, &pipex);
+// 	free_all(&pipex, FREE_LST);
+// 	return (0);
+// }
