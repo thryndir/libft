@@ -6,7 +6,7 @@
 #    By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 18:19:52 by lgalloux          #+#    #+#              #
-#    Updated: 2024/09/14 14:47:11 by lgalloux         ###   ########.fr        #
+#    Updated: 2024/09/17 14:12:00 by lgalloux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,12 @@ libft/ft_lstnew libft/ft_lstadd_front libft/ft_lstadd_back libft/ft_atoull\
 libft/ft_lstdelone libft/ft_lstclear libft/ft_lstiter libft/ft_lstmap libft/ft_putnbr\
 libft/ft_is_word_in libft/ft_isspace libft/ft_strcmp\
 printf/ft_gestchar printf/ft_gesthexa printf/ft_gestint printf/ft_printf\
-gnl/get_next_line gnl/get_next_line_utils pipex/error pipex/exec pipex/init_exec\
-pipex/init pipex/main pipex/utils
+gnl/get_next_line gnl/get_next_line_utils
 
 SRC_DIR = src/
 OBJ_DIR = obj/
 
+SRCS = $(addsuffix .c, $(addprefix $(SRC_DIR), $(FILES)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(FILES)))
 
 all: $(NAME)
