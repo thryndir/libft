@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <limits.h>
+# include <stdbool.h>
 
 /******************************************************************************/
 /*                                                                            */
@@ -58,7 +59,7 @@ typedef struct s_list
  * @param c the char we are comparing
  * @return int return 1 if `c` is a space, 0 in the other case
  */
-int				ft_isspace(char c);
+bool				ft_isspace(char c);
 
 /**
  * @brief Tells whether or not `c` is a letter.
