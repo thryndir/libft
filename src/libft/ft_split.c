@@ -6,7 +6,7 @@
 /*   By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:16:31 by lgalloux          #+#    #+#             */
-/*   Updated: 2024/05/27 21:57:12 by lgalloux         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:45:57 by lgalloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	ft_malloc_fail(char **strs, int j)
 	i = 0;
 	while (i < j)
 	{
-		free(strs[i]);
+		gc_free(strs[i]);
 		i++;
 	}
-	free(strs);
+	gc_free(strs);
 }
 
 char	**ft_str_to_array(char **strs, const char *str, char c)
@@ -72,7 +72,7 @@ char	**ft_str_to_array(char **strs, const char *str, char c)
 		k = 0;
 		while (str[i] && str[i] == c)
 			i++;
-		strs[j] = (char *)malloc((ft_charnbr(str + i, c) + 1) * sizeof(char));
+		strs[j] = gc_malloc((ft_charnbr(str + i, c) + 1) * sizeof(char));
 		if (strs[j] == NULL)
 		{
 			ft_malloc_fail(strs, j);
@@ -92,7 +92,7 @@ char	**ft_split(char const *str, char c)
 
 	if (str == NULL)
 		return (NULL);
-	strs = (char **)malloc((ft_strnbr(str, c) + 1) * sizeof(char *));
+	strs = (char **)gc_malloc((ft_strnbr(str, c) + 1) * sizeof(char *));
 	if (strs == NULL)
 		return (NULL);
 	strs = ft_str_to_array(strs, str, c);

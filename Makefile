@@ -13,7 +13,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
-HEADER = -Iinclude
+HEADER = -Iinclude -I../include
 NAME = libft.a
 TNAME = test
 

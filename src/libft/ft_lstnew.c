@@ -16,7 +16,7 @@ t_list	*ft_lstnew(int data)
 {
 	t_list	*stack;
 
-	stack = malloc(sizeof(t_list));
+	stack = gc_malloc(sizeof(t_list));
 	if (!stack)
 		return (NULL);
 	stack->data = data;

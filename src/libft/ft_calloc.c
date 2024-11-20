@@ -19,7 +19,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 
 	if (!elementCount || !elementSize)
 		return (NULL);
-	memory = malloc(elementCount * elementSize);
+	memory = gc_malloc(elementCount * elementSize);
 	if (memory == NULL)
 		return (NULL);
 	i = 0;

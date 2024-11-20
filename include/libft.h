@@ -6,7 +6,7 @@
 /*   By: lgalloux <lgalloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:59:46 by lgalloux          #+#    #+#             */
-/*   Updated: 2024/09/16 17:46:14 by lgalloux         ###   ########.fr       */
+/*   Updated: 2024/11/20 12:22:09 by lgalloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdbool.h>
 # include <fcntl.h>
+# include "gcmalloc.h"
 # include <stdio.h>
 # include <limits.h>
 # include <stdbool.h>
@@ -59,7 +61,7 @@ typedef struct s_list
  * @param c the char we are comparing
  * @return int return 1 if `c` is a space, 0 in the other case
  */
-bool				ft_isspace(char c);
+bool			ft_isspace(char c);
 
 /**
  * @brief Tells whether or not `c` is a letter.
@@ -678,19 +680,5 @@ t_list			*ft_lstmap(t_list *lst, int (*f)(int), int (*del)(int));
 /* Security                                                                   */
 /*                                                                            */
 /******************************************************************************/
-
-/**
- * @brief this function will free every subtab of an tab
- * 
- * @param lst a tab which is free after this function
- */
-void			ft_freestr(char **lst);
-
-/**
- * @brief this fuction will free every node of a t_list type
- * 
- * @param lst the list which will be freed
- */
-void			ft_free_llist(t_list **lst);
 
 #endif
